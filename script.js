@@ -26,7 +26,9 @@ function parseCSV(data) {
     return Object.fromEntries(headers.map((h, i) => [h.trim(), values[i]?.trim() ?? '']));
   });
 
-  renderListings(items);
+  // Randomize order for interspersing
+  const shuffled = items.sort(() => 0.5 - Math.random());
+  renderListings(shuffled);
 }
 
 function renderListings(items) {
@@ -51,12 +53,15 @@ function renderListings(items) {
     };
 
     el.appendChild(img);
-    el.innerHTML += `
-      <h2>${item.title}</h2>
-      <p>${item.description}</p>
-      <p><strong>${item.price}</strong></p>
-      <a href="${item.url}" target="_blank">View</a>
-    `;
+
+    let innerHTML = `<h2>${item.title}</h2><p>${item.description}</p>`;
+
+    if (item.type === "product") {
+      innerHTML += `<p><strong>${item.price}</strong></p>`;
+    }
+
+    innerHTML += `<a href="${item.url}" target="_blank">View</a>`;
+    el.innerHTML += innerHTML;
 
     container.appendChild(el);
   });
