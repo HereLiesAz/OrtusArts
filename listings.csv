@@ -1,3 +1,5 @@
-title,image,description,price,url
-Shadow Bloom,https://yourcdn.com/images/shadowbloom.jpg,Acrylic on wood, 24x36,$150,https://www.instagram.com/p/abc123
-Saints of Rust,https://yourcdn.com/images/saintsrust.jpg,High-contrast ink print,$40,https://www.facebook.com/marketplace/item/xyz456
+type,title,image,description,price,url
+product,Shadow Bloom,https://yourcdn.com/images/shadowbloom.jpg,Acrylic on wood, 24x36,$150,https://www.instagram.com/p/abc123
+post,Behind the Canvas,https://yourcdn.com/images/studio.jpg,Working late in the studio,,https://www.instagram.com/p/studio456
+product,Saints of Rust,https://yourcdn.com/images/saintsrust.jpg,High-contrast ink print,$40,https://www.facebook.com/marketplace/item/xyz456
+post,Night Market Vibes,https://yourcdn.com/images/booth.jpg,Thanks to everyone who came out!,,https://www.facebook.com/posts/booth789
